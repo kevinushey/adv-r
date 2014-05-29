@@ -539,7 +539,7 @@ while(i < 3) {
 }
 ```
 
-`tryCatch()` has one other argument: `finally`. It specifies a block of code (not a function) to run regardless of whether of the initial expression succeeds or fails. This can be useful for clean up (e.g. deleting files, closing connections). This is functionally equivalent to using `on.exit()` but it can wrap smaller chunks of code than an entire function.
+`tryCatch()` has one other argument: `finally`. It specifies a block of code (not a function) to run regardless of whether of the initial expression succeeds or fails. This can be useful for clean up (e.g. deleting files, closing connections). This is functionally equivalent to using `on.exit()` (in fact, `tryCatch` uses `on.exit` to handle the expression passed to `finally`), but it can wrap smaller chunks of code than an entire function.
 
 ### `withCallingHandlers()`
 
